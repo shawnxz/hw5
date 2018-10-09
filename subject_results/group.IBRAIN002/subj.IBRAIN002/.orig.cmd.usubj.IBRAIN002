@@ -1,0 +1,29 @@
+uber_subject.py                                                                    \
+    -cvar subj_dir subject_results/group.IBRAIN002/subj.IBRAIN002                  \
+    -svar anat /bind/bids/sub-IBRAIN002/anat/sub-IBRAIN002_T1w.nii.gz              \
+    -svar blur_size 6.0                                                            \
+    -svar epi                                                                      \
+    /bind/bids/sub-IBRAIN002/func/sub-IBRAIN002_task-words_run-01_bold.nii.gz      \
+    /bind/bids/sub-IBRAIN002/func/sub-IBRAIN002_task-words_run-02_bold.nii.gz      \
+    -svar epi_wildcard yes                                                         \
+    -svar gid IBRAIN002                                                            \
+    -svar gltsym '.25*leg +.25*arm +.25*face +.25*filler' 'leg +arm +face          \
+    +filler -4*hash'                                                               \
+    -svar gltsym_label word word-hash                                              \
+    -svar motion_limit 0.5                                                         \
+    -svar regress_mot_deriv yes                                                    \
+    -svar run_clustsim no                                                          \
+    -svar sid IBRAIN002                                                            \
+    -svar stim                                                                     \
+    /bind/bids/sub-IBRAIN002/onsets/sub-IBRAIN002_task-words_run-01_condition-1.1d \
+    /bind/bids/sub-IBRAIN002/onsets/sub-IBRAIN002_task-words_run-01_condition-2.1d \
+    /bind/bids/sub-IBRAIN002/onsets/sub-IBRAIN002_task-words_run-01_condition-3.1d \
+    /bind/bids/sub-IBRAIN002/onsets/sub-IBRAIN002_task-words_run-01_condition-4.1d \
+    /bind/bids/sub-IBRAIN002/onsets/sub-IBRAIN002_task-words_run-01_condition-5.1d \
+                                                                                   \
+    -svar stim_basis 'GAM' 'GAM' 'GAM' 'GAM' 'GAM'                                 \
+    -svar stim_label leg arm face hash filler                                      \
+    -svar stim_type times times times times times                                  \
+    -svar stim_wildcard yes                                                        \
+    -svar tlrc_base MNI_avg152T1+tlrc                                              \
+    -svar volreg_base first
